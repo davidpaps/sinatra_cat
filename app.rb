@@ -2,12 +2,12 @@ require "sinatra"
 set :session_secret, 'super secret'
 
 get '/' do
-  "Hello World"
+  "Hello World, welcome to the homepage"
 end
 
 
 get '/secret' do
-  "New message is new, really new"
+  "New message in a secret path!"
 end
 
 get '/random-cat' do
@@ -20,7 +20,6 @@ get '/cat-form' do
 end
 
 post '/named-cat' do
-  p params
   @name = params[:name]
  erb(:index)
 end
